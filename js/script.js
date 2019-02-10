@@ -15,7 +15,16 @@ FSJS project 1 - A Random Quote Generator
     - Add at least one `year` and/or `citation` property to at least one 
       quote object.
 ***/
-
+var quotes = [
+    {
+       quote: 'Macintosh',
+       source: 'Red'
+    },
+    {
+       quote: 'Fuji',
+       source: 'Green'
+    },
+];
 
 
 
@@ -25,7 +34,10 @@ FSJS project 1 - A Random Quote Generator
    - use the random number to `return` a random quote object from the 
      `quotes` array.
 ***/
-
+function getRandomQuote(){
+  let randomNumber = Math.random() * (quotes.length-0) + 0;
+  return quotes[Math.floor(randomNumber)];
+}
 
 
 
@@ -38,7 +50,11 @@ FSJS project 1 - A Random Quote Generator
      they are added to the HTML string.
    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
+function printQuote(){
+  let quote = getRandomQuote();
+  alert(quote.quote);
 
+}
 
 
 
